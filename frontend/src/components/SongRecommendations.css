@@ -1,0 +1,89 @@
+/* Container Styles */
+.section.glass {
+  padding: 20px;
+  border-radius: 15px;
+  /* Add your specific glassmorphism background/backdrop-filter here */
+}
+
+.section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 2.2rem;
+  color: #000000;
+
+}
+
+/* Row Styles */
+.song-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove border from the last item */
+.song-row:last-child {
+  border-bottom: none;
+}
+
+/* Text Styles */
+.song-title {
+  font-weight: 500;
+}
+
+.song-artist {
+  font-size: 13px;
+  color: #666;
+}
+
+.play-button {
+  cursor: pointer;
+  user-select: none;
+}
+/* This is the container that becomes the blue circle */
+.play-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* This controls the size of the icon inside the circle */
+.play-icon-circle svg {
+  width: 25px;
+  height: 25px;
+  transition: color 0.2s;
+}
+
+/* The Hover Effect */
+.play-icon-circle:hover {
+  background-color: #7e7e7e1a; /* Light blue circle background */
+  color: #747474; /* Changes icon color to pure blue */
+  /* Creates the glow effect around the triangle shape */
+  filter: drop-shadow(0 0 8px rgba(181, 25, 25, 0.6));
+}
+.premium-title {
+  font-family: 'Outfit', sans-serif;
+
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  /* Optional: Add a slight gradient text effect to make it pop */
+  background: linear-gradient(90deg, #ffffff, #262626);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-empty-message {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #a8b2c1; /* A soft, premium gray */
+  text-align: center;
+  padding: 2rem;
+}

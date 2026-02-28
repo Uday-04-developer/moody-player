@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 32px;
+}
+
+.section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+/* Caveat fonts */
+.caveat-unique {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700; /* replace with 400 or 700 as needed */
+  font-style: normal;
+
+
+}
+
+
+.edu-sa-beginner-unique {
+  font-family: "Edu SA Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button {
+  background: #6d28d9;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #5b21b6;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    120deg,
+    #15235f,
+    #3b1d5f,
+    #670e0e,
+    #1a1a3f
+  );
+  background-size: 300% 300%;
+  animation: moodyGradient 12s ease infinite;
+}
+
+/* Smooth gradient animation */
+@keyframes moodyGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(180px) saturate(100%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  padding: 24px;
+}

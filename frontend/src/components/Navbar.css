@@ -1,0 +1,285 @@
+/* Navbar.css */
+.glass-navbar {
+  height: 70px;
+  width: 100%;
+  background: #ffffff14 !important;
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Logo Styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navbar-container {
+  width: 100%;        /* Changed from max-width: 1200px */
+  margin: 0;          /* Removed auto margin */
+  padding: 0 24px;    /* Adds nice space from the left/right edges */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns everything to the left initially */
+}
+
+/* 2. Push the links to the right to leave the center blank */
+.navbar-links {
+  margin-left: auto;  /* THE MAGIC TRICK: Pushes this element to the right */
+  margin-right: 30px; /* Adds space between links and the profile/status */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 3. Ensure the Logo SVG is the right size */
+.navbar-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 100%;
+  filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.4));
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  width: max-content;
+}
+
+.logo-title {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  padding-right: 0.2em;  /* Adds space for the last letter so it doesn't get cut */
+  padding-bottom: 0.1em;
+}
+
+.logo-subtitle {
+  font-size: 0.7rem;
+  color: #a0aec0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: -4px;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  border: none;
+  background: rgba(102, 126, 234, 0.1);
+  color: #718096;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.nav-link.active:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* Status Section */
+.navbar-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #48bb78;
+  position: relative;
+}
+
+.status-dot.active {
+  background: #48bb78;
+  box-shadow: 0 0 10px rgba(72, 187, 120, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(72, 187, 120, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+  }
+}
+
+.status-text {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.user-profile {
+  border: none;
+  background: rgba(102, 126, 234, 0.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.user-profile:hover {
+  background: rgba(102, 126, 234, 0.25);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.avatar {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  
+  .logo-title {
+    font-size: 1.5rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.6rem;
+  }
+  
+  .status-indicator {
+    padding: 6px 12px;
+  }
+  
+  .status-text {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-navbar {
+    padding: 0 15px;
+    height: 60px;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+  
+  .navbar-status {
+    gap: 10px;
+  }
+}
+
+/* Glass effect enhancement */
+.glass-navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Shadow effect for depth */
+.glass-navbar {
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
